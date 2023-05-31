@@ -75,7 +75,7 @@ class LoginViewModel: BaseViewModel,
                 case .failure(let error):
                     self.displayMessage.send(error.localizedDescription)
                 case .finished:
-                    print("FINISHED")
+                    printIfDebug("FINISHED")
                 }
             } receiveValue: { (response) in
                 if response.status,
